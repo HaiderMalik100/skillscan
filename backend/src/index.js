@@ -9,7 +9,7 @@ if (!global.Path2D) global.Path2D = class {};
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-
+app.set('trust proxy', 1);
 app.use(cors({ origin: process.env.FRONTEND_URL || '*' }));
 app.use(express.json());
 app.use(limiter);
