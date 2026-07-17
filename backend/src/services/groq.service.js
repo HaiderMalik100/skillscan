@@ -100,7 +100,7 @@ export async function analyzeWithGroq({ resumeText, jobRole, jobDescription, lev
       { role: "system", content: SYSTEM },
       { role: "user", content: `Resume: ${resumeText.slice(0,5000)}\nJD: ${(jobDescription||'').slice(0,2000)}\nRole:${jobRole}` }
     ]
-  });
+  },{ timeout: 20000 });
 
   const parsed = JSON.parse(completion.choices[0].message.content);
 

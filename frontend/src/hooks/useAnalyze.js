@@ -28,7 +28,7 @@ export default function useAnalyze() {
 
       const res = await axios.post(`${API_URL}/api/analyze`, formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
-        timeout: 30000
+        timeout: 60000
       });
 
       setResult(res.data);

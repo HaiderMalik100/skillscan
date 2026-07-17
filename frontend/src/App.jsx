@@ -53,7 +53,7 @@ export default function App() {
             >
               {loading ? 'Analyzing...' : 'Analyze Resume →'}
             </button>
-            <p className="text-[11px] text-center text-gray-400">Free • No data stored • PDF/DOCX only</p>
+            <p className="text-[11px] text-center text-gray-400">PDF/DOCX only</p>
           </div>
 
          
